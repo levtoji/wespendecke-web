@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wespendecke</title>
+    
+<script type="module">
+import init, * as bindings from './wespendecke-619aa738e4862d94.js';
+const wasm = await init({ module_or_path: './wespendecke-482599197b461431_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+    <style>
+      /* The canvas fills the page; the color is the tablecloth's. */
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #faf7f0;
+      }
+      canvas {
+        display: block;
+        outline: none;
+      }
+    </style>
+  <link rel="modulepreload" href="./wespendecke-619aa738e4862d94.js" crossorigin="anonymous" integrity="sha384-HilYBAZkhKi0EccJ+dk8t+f57M+uIhW8BzqwIaFqvVF3pTu3OxcxpRivgVyWY8oK"><link rel="preload" href="./wespendecke-482599197b461431_bg.wasm" crossorigin="anonymous" integrity="sha384-e0jAh58ZA6sbKU2Rh1c6unPTqybVHLqImIzNvJCk8oEowxIEepPH9zEy1aL/V0Pw" as="fetch" type="application/wasm"></head>
+  <body></body>
+</html>
